@@ -1,6 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { GithubIcon } from "lucide-react";
+import googleIcon from "@/public/img/google.svg";
 import Link from "next/link";
+import Image from "next/image";
 
 const SignUp = () => {
   return (
@@ -28,6 +31,14 @@ const SignUp = () => {
         <Link href="/login" className="text-white hover:underline">
           Inicia sessión!
         </Link>
+      </div>
+      <div className="flex w-full justify-center items-center gap-x-3 mt-6 ">
+        <Button variant="outline" size="icon">
+          <GithubIcon className="w-4 h-4" />
+        </Button>
+        <Button variant="outline" size="icon">
+          <Image src={googleIcon} alt="googleIcon" className="w-6 h-6" />
+        </Button>
       </div>
     </div>
   );
